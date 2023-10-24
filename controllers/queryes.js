@@ -17,7 +17,7 @@ const sendEmail = (req,res)=>{
 
 const getAllEmpleados = (req,res,next)=>{
     empleados.obtenerTodosLosEmpleados().then(empleados=>{
-        return res.status(200).send("hola");
+        return res.status(200).send(empleados);
     })
 }
 
@@ -52,5 +52,6 @@ module.exports = {
     getEmpleado,
     deletEmpleado,
     putEmpleado,
-    postEmpleado
+    postEmpleado,
+    sendEmail,sendPrueba
 }
