@@ -1,5 +1,19 @@
 const express = require('express')
 const empleados  =require("../models/employee")
+const mensaje = require('../models/smtp');
+
+const sendPrueba = (req, res)=>{
+    mensaje.prueba().then(()=>{
+        return res.status(200).send("Prueba lista")
+    })
+}
+
+const sendEmail = (req,res)=>{
+    const data = req.body
+    mensaje.sendMail(data.from, data.to, data.subjet, data.html).then(()=>{
+        return res.status(200).send("Se completo el proceso");
+    })
+}
 
 const getAllEmpleados = (req,res,next)=>{
     empleados.obtenerTodosLosEmpleados().then(empleados=>{

@@ -25,5 +25,4 @@ module.exports = {
         const res = await conection.query(`UPDATE ${table_name} set nombre = ${nombre},nickname = ${nickname},correo = ${correo},rol = ${rol},departamento = ${departamento} WHERE id = ${id}`);
         return res;
     },
-
 }

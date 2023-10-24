@@ -1,0 +1,8 @@
+{
+    "host": "smtp.gmail.com",
+    "port": 587,
+    "auth": {
+        "user": "casillascespedescesardaniel@gmail.com",
+        "pass": "qsre yxqi cwyz fjnv"
+    }
+}
